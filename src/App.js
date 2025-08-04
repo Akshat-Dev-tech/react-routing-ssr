@@ -6,6 +6,8 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import NestedComp1 from './components/NestedComp1';
+import NestedComp2 from './components/NestedComp2';
 
 function App() {
   return (
@@ -38,7 +40,11 @@ function App() {
           <Route path="/" element={<Home/>} />
           
           {/* Route for About page - accessible at /about */}
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About/>} >
+            {/* Nested routes can go here */}
+            <Route path="nested1" element={<NestedComp1 />} />
+            <Route path="nested2" element={<NestedComp2 />} />
+          </Route>
           
           {/* Route for Contact page - accessible at /contact */}
           <Route path="/contact" element={<Contact/>} />
