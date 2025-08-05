@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import NestedComp1 from './components/NestedComp1';
 import NestedComp2 from './components/NestedComp2';
 import Products from './components/Products';
+import ProtectedRoute from './RBAC/ProtectedRoute';
 
 function App() {
   return (
@@ -49,7 +50,11 @@ function App() {
           </Route>
           
           {/* Route for Contact page - accessible at /contact */}
-          <Route path="/contact" element={<Contact/>} />
+            <Route path="/contact" element={
+              <ProtectedRoute allowedroles={['admin', 'user']}>
+                <Contact/>
+              </ProtectedRoute>
+              } />
 
           {/* in case if you want to redirect to product page , we can use this  */}
           {/* <Route path="/products" element={<div>In the Product pages</div>} /> */}
