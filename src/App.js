@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NestedComp1 from './components/NestedComp1';
 import NestedComp2 from './components/NestedComp2';
+import Products from './components/Products';
 
 function App() {
   return (
@@ -49,6 +50,13 @@ function App() {
           
           {/* Route for Contact page - accessible at /contact */}
           <Route path="/contact" element={<Contact/>} />
+
+          {/* in case if you want to redirect to product page , we can use this  */}
+          {/* <Route path="/products" element={<div>In the Product pages</div>} /> */}
+          
+          {/* Route for Users page with route parmeters - accessible at /users */}
+          <Route path="/products/:name" element={<Products/>} />
+
         </Routes>
       </Router>
     </div>
