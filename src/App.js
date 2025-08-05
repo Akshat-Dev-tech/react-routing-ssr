@@ -40,8 +40,9 @@ function App() {
           <Route path="/" element={<Home/>} />
           
           {/* Route for About page - accessible at /about */}
-          <Route path="/about" element={<About/>} >
+          <Route path="/about" >
             {/* Nested routes can go here */}
+            <Route index element={<About/>} />
             <Route path="nested1" element={<NestedComp1 />} />
             <Route path="nested2" element={<NestedComp2 />} />
           </Route>
