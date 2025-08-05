@@ -9,13 +9,13 @@ export const productData = {
       {
         id: 'iphone-14',
         name: 'iPhone 14',
-        price: 799,
+        price: 499,
         description: 'Previous generation iPhone with A16 chip',
       },
       {
         id: 'iphone-se',
         name: 'iPhone SE',
-        price: 499,
+        price: 899,
         description: 'Budget-friendly iPhone with Touch ID',
       },
     ],
