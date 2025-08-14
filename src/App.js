@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  
+import { Route, Routes } from 'react-router-dom';  
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
@@ -34,7 +32,6 @@ function App() {
           What URL parameters exist
           Current location */}
 
-        <Router>
           {/* Navigation component containing Link elements */}
           <Navigation />
 
@@ -66,7 +63,7 @@ function App() {
             <Route path="/products/:name" element={<Products/>} />
 
           </Routes>
-        </Router>
+
       </div>
     </AuthProvider>
   );
