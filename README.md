@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+##Our current setup how things works :
+##Hybrid SSR
+
+
+First visit: Server renders
+Subsequent navigation: Client handles
+
+
+Example :
+
+User visits /about (first time)
+    ↓
+Server renders About component
+    ↓
+HTML sent to browser
+    ↓
+JavaScript loads and hydrates
+    ↓
+React Router becomes active
+    ↓
+User clicks "Contact" link
+    ↓
+Client-side routing (no server)
+    ↓
+Contact component renders instantly
