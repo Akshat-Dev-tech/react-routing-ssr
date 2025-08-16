@@ -41,7 +41,10 @@ const App = require('./src/App').default;
     res.send(`
       <!DOCTYPE html>
       <html>
-        <head><title>SSR Example</title></head>
+        <head>
+          <title>SSR Example</title>
+          <link href="/static/css/main.f855e6bc.css" rel="stylesheet">
+        </head>
         <body>
           <div id="root">${appString}</div>
           <script src="/static/js/main.7be96c83.js"></script>
