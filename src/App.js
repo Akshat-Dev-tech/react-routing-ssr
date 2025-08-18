@@ -9,6 +9,7 @@ import NestedComp2 from './components/NestedComp2';
 import Products from './components/Products';
 import ProtectedRoute from './RBAC/ProtectedRoute';
 import AuthProvider from './RBAC/AuthContext';
+import GetData from './components/GetData';
 
 function App() {
   return (
@@ -61,7 +62,7 @@ function App() {
             
             {/* Route for Users page with route parmeters - accessible at /users */}
             <Route path="/products/:name" element={<Products/>} />
-
+            <Route path="/getdata" element={<GetData/>} />
           </Routes>
 
       </div>

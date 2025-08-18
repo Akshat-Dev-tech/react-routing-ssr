@@ -16,11 +16,6 @@ const App = require('./src/App').default;
   app.use('/favicon.ico', express.static(path.join(__dirname, 'build/favicon.ico')));
   app.use('/logo192.png', express.static(path.join(__dirname, 'build/logo192.png')));
   app.use('/manifest.json', express.static(path.join(__dirname, 'build/manifest.json')));
-  
-  // Load asset manifest for dynamic file paths
-  const assetManifest = JSON.parse(
-    require('fs').readFileSync('./build/asset-manifest.json', 'utf8')
-  );
 
 
 
@@ -48,11 +43,11 @@ const App = require('./src/App').default;
       <html>
         <head>
           <title>SSR Example</title>
-          <link href="${assetManifest.files['main.css']}" rel="stylesheet">
+          <link href="/static/css/main.f855e6bc.css" rel="stylesheet">
         </head>
         <body>
           <div id="root">${appString}</div>
-          <script src="${assetManifest.files['main.js']}"></script>
+          <script src="/static/js/main.7be96c83.js"></script>
         </body>
       </html>
     `);
