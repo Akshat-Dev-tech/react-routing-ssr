@@ -24,6 +24,7 @@ const App = require('./src/App').default;
   app.get('/*', (req, res) => {
     let appString = '';
     const currentUrl = req.url;
+    console.log("Current URL:", currentUrl);
     try {
       appString = ReactDOMServer.renderToString(
         React.createElement(
@@ -47,7 +48,7 @@ const App = require('./src/App').default;
         </head>
         <body>
           <div id="root">${appString}</div>
-          <script src="/static/js/main.fbf3265a.js"></script>
+          <script src="/static/js/main.1fa23025.js"></script>
         </body>
       </html>
     `);
