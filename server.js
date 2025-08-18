@@ -47,7 +47,7 @@ const App = require('./src/App').default;
         </head>
         <body>
           <div id="root">${appString}</div>
-          <script src="/static/js/main.7be96c83.js"></script>
+          <script src="/static/js/main.fbf3265a.js"></script>
         </body>
       </html>
     `);

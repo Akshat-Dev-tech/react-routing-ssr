@@ -10,6 +10,7 @@ import Products from './components/Products';
 import ProtectedRoute from './RBAC/ProtectedRoute';
 import AuthProvider from './RBAC/AuthContext';
 import GetData from './components/GetData';
+import './App.css'; // Importing CSS for styling
 
 function App() {
   return (

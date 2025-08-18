@@ -3,6 +3,7 @@
     "@babel/preset-env",
     "@babel/preset-react"
   ],
+  "plugins": ["css-modules-transform"],
   "only": [
     "./src/**/*.js"
   ]
